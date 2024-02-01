@@ -19,7 +19,7 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
        'Sharjah', 'Mohali', 'Bengaluru']
 
 import pickle
-pickle.dump(pipe,open('pipe.pkl','wb'))
+pickle.dump(pipe,open('pipe.pkl','rb'))
 st.title('IPL Win Predictor')
 
 col1, col2 = st.beta_columns(2)
