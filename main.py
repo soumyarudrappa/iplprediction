@@ -48,7 +48,7 @@ if st.button('Predict Probability'):
     wickets = 10 - wickets
     crr = score/overs
     rrr = (runs_left*6)/balls_left
-    hasattr(obj,'transform')
+    hasattr('str','transform')
     input_df = pd.DataFrame({'batting_team':[batting_team],'bowling_team':[bowling_team],'city':[selected_city],'runs_left':[runs_left],'balls_left':[balls_left],'wickets':[wickets],'total_runs_x':[target],'crr':[crr],'rrr':[rrr]})
 
     result = pipe.predict_proba(input_df)
