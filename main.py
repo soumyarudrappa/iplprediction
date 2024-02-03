@@ -19,7 +19,7 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
        'Sharjah', 'Mohali', 'Bengaluru']
 
 import pickle
-pipe=pickle.load(open('pipe.pkl','rb'))
+pipe = pickle.load(open('pipe.pkl','rb'))
 st.title('IPL Win Predictor')
 
 col1, col2 = st.columns(2)
@@ -48,7 +48,7 @@ if st.button('Predict Probability'):
     wickets = 10 - wickets
     crr = score/overs
     rrr = (runs_left*6)/balls_left
-    hasattr(str,'transform')
+
     input_df = pd.DataFrame({'batting_team':[batting_team],'bowling_team':[bowling_team],'city':[selected_city],'runs_left':[runs_left],'balls_left':[balls_left],'wickets':[wickets],'total_runs_x':[target],'crr':[crr],'rrr':[rrr]})
 
     result = pipe.predict_proba(input_df)
